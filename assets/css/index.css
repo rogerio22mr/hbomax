@@ -1,0 +1,384 @@
+@import url('./global.css');
+
+main {
+    margin-top: 52px;
+}
+
+main .assinatura {
+    position: relative;
+    padding: 100px 0 300px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    color: white;
+    background-size: 400% 400%;
+
+    animation-name: gradient;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+main .assinatura::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+main .assinatura__imgs {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+main .assinatura__imgs img {
+    width: 6rem;
+}
+
+main .assinatura__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.9rem;
+    width: 100%;
+}
+
+.assinatura__content__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.assinatura__content__title  h2 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.assinatura__content__title  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.divider {
+    background: var(--divider-bg-color);
+    height: 0.3rem;
+    width: 54%;
+}
+
+.assinatura__content .mensagem__valor {
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.assinatura__content .price {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.assinatura__content .price__small {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.assinatura__content button {
+    border: none;
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: wiggle 2.2s linear infinite;
+    transition: background 1s, outline 1s, transform 1s;
+}
+
+.assinatura__content button:hover{
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+}
+
+.assinatura__content .mensagem__plano {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+main .subscription {
+    background: url("./../images/background-movies-series.png");
+    background-size: cover;
+    position: relative;
+}
+
+main .subscription h2 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main .subscription__cards {
+    display: flex;
+    gap: 5rem;
+    margin: 40px 0;
+}
+
+main .subscription__card {
+    background: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    gap: 7rem;
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: transform 1s ease-in-out;
+}
+
+
+main .subscription__cards:has(.subscription__card:nth-child(1):hover)
+    .subscription__card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+main .subscription__cards:has(.subscription__card:nth-child(2):hover)
+    .subscription__card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+main .subscription__card .header__subscription_card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem .5rem;
+}
+
+main .subscription__card .header__subscription_card h3 {
+    font-size: 1.5rem;
+}
+
+main .subscription__card .header__subscription_card p {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+main .subscription__card .header__subscription_card span {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+main .subscription__card ul li {
+    text-align: start;
+    font-size: 1.25rem;
+    padding-left: 14px;
+    margin-bottom: 14px;
+}
+
+main .subscription__card ul li::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 8px 0 0;
+}
+
+main .subscription__card button {
+    background: var(--btn-bg-color-gradient);
+    background-size: 250%;
+    padding: 1rem;
+    border-radius: 100px;
+    border-style: none;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    transition: background 1s, outline 1s, transform 1s;
+    cursor: pointer;
+}
+
+main .subscription__card button:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+main .catalogo {
+    margin: 100px auto;
+}
+
+main .catalogo h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+main .catalogo__content {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+main .content__card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+main .content__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+}
+
+main .content__card:hover .content__img {
+    opacity: 0;
+}
+
+main .content__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+main .content__card:nth-child(1):hover {
+    background-image: url("./../images/hbo-hover_0.webp");
+}
+
+main .content__card:nth-child(2):hover {
+    background-image: url("./../images/MAX-Hover.webp");
+}
+
+main .content__card:nth-child(3):hover {
+    background-image: url("./../images/DC-Hover.webp");
+}
+
+main .content__card:nth-child(4):hover {
+    background-image: url("./../images/WB-Hover.webp");
+}
+
+main .content__card:nth-child(5):hover {
+    background-image: url("./../images/CN-Hover.png");
+}
+
+main .content__card:nth-child(6):hover {
+    background-image: url("./../images/UCL-Hover.webp");
+}
+
+@media screen and (max-width: 1200px) {
+    .subscription__cards {
+      gap: 40px;
+    }
+  
+    .catalogo__content {
+      gap: 32px;
+    }
+  }
+  
+  @media screen and (max-width: 1140px) {
+    .subscription__cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .subscription__card {
+      max-width: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .catalogo__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .header__subscription_card p {
+      font-size: 1.5rem;
+    }
+  
+    .subscription__card ul li {
+      font-size: 1rem;
+    }
+  
+    .header__subscription_card {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .subscription__card {
+      padding: 40px;
+    }
+  
+    .catalogo__content {
+      grid-template-columns: repeat(6, 100%);
+      grid-auto-flow: column;
+      overflow: auto hidden;
+    }
+  }
+  
+  @media (pointer: coarse) {
+    .catalogo__content:hover {
+      transform: none;
+    }
+  
+    .subscription__cards:has(.subscription__card:nth-child(1):hover)
+      .subscription__card:nth-child(2),
+    .subscription__cards:has(.subscription__card:nth-child(2):hover)
+      .subscription__card:nth-child(1) {
+      transform: none;
+    }
+  }
+
+/* Animation */
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+    0%,
+    10% {
+      transform: rotate(0);
+    }
+    15% {
+      transform: rotate(-15deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    30% {
+      transform: rotate(10deg);
+    }
+    35% {
+      transform: rotate(-10deg);
+    }
+    40%,
+    100% {
+      transform: rotate(0);
+    }
+}
