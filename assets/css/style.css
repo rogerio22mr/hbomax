@@ -1,0 +1,471 @@
+@import url('./global.css');
+
+body {
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+.menu {
+  background-color: var(--nav-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 24px;
+  gap: 24px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.menu__logo {
+  max-width: 100px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 24px;
+}
+
+.menu ul a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+
+.menu__button {
+  background-color: var(--tertiary-color);
+  padding: 8px 26px;
+  border-radius: 50px;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.menu__button:hover {
+  background-color: var(--btn-link-bg-color);
+  color: var(--btn-link-color);
+}
+
+.header__apresentacao {
+  margin-top: 130px;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px 300px;
+  background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+  background-size: 400% 400%;
+  gap: 40px;
+  animation: gradient 10s ease alternate infinite;
+}
+
+.header__apresentacao__logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.header__apresentacao__logos > img {
+  object-fit: contain;
+}
+
+.header__apresentacao h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__apresentacao h1 span {
+  display: block;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.header__apresentacao .divider {
+  background: var(--divider-bg-color);
+  height: 4px;
+  width: 70%;
+  max-width: 700px;
+}
+
+.container__assinatura p {
+  font-size: 1.25rem;
+}
+
+.container__assinatura .assinatura__valor {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.container__assinatura .assinatura__valor span {
+  font-weight: lighter;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 1s, transform 1s, outline 1s;
+}
+
+.button__gradient { 
+  background: var(--btn-bg-color-gradient);
+  background-size: 250%;
+  outline: 3px solid transparent;
+}
+
+.button__gradient:hover {
+  background-color: transparent;
+  background-position: 100%;
+  outline: 3px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.button__wiggle {
+  animation: wiggle 2.2s linear infinite;
+}
+
+.header__apresentacao__atencao {
+  font-weight: lighter;
+  text-align: center;
+  max-width: 300px;
+}
+
+.header__apresentacao::after {
+  content: "";
+  background: linear-gradient(0deg, var(--primary-color), transparent);
+  width: 100vw;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+}
+
+main {
+  background: url('/assets/images/background-movies-series.png') no-repeat;
+  background-size: cover;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  padding-top: 100px;
+  gap: 48px;
+  background: url('/assets/images/background-movies-series.png') no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.plans h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg-color);
+  max-width: 600px;
+  height: 600px;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.card__title h3 {
+  font-size: 1.4625rem;
+  text-align: center;
+}
+
+.card__title .text__price {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.card__title .text__price span {
+  font-weight: lighter;
+}
+
+.list_itens .itens {
+  list-style: symbols("+");
+  margin-bottom: 14px;
+  padding-left: 14px;
+}
+
+.list_itens .itens::marker {
+  content: "+";
+  font-size: 2rem;
+  margin-left: 8px;
+}
+
+.card button {
+  font-size: .83333rem;
+}
+
+.tvshows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  margin: 100px 0;
+  gap: 40px;
+}
+
+.tvshows h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.cards__tvshows {
+  display: grid;
+  grid-template-columns: repeat(6, 100%);
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 32px;
+}
+
+.card__tvshow {
+  border-radius: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.card__tvshow:hover { 
+  transform: scale(1.05);
+  border: 2px solid var(--tertiary-color);
+}
+
+.card__tvshow:hover img {
+  opacity: 0;
+}
+
+.card__tvshow img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+/*HBO*/
+
+.card__tvshow:nth-child(1):hover {
+  background-image: url('../images/hbo-hover_0.webp');
+}
+
+/*MAX*/
+
+.card__tvshow:nth-child(2):hover {
+  background-image: url('../images/MAX-Hover.webp');
+}
+
+/*DC*/
+
+.card__tvshow:nth-child(3):hover {
+  background-image: url('../images/DC-Hover.webp');
+}
+
+/*WB*/
+
+.card__tvshow:nth-child(4):hover {
+  background-image: url('../images/WB-Hover.webp');
+}
+
+/*CN*/
+
+.card__tvshow:nth-child(5):hover {
+  background-image: url('../images/CN-Hover.png');
+}
+
+/*UCL*/
+
+.card__tvshow:nth-child(6):hover {
+  background-image: url('../images/UCL-Hover.webp');
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+footer .links { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .links a {
+  font-size: .875rem;
+  font-weight: bold;
+  color: var(--link-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.5s;
+}
+
+footer .links a:hover { 
+  color: white;
+}
+
+footer p {
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 300;
+  color: var(--link-color);
+  margin: 16px 0;
+}
+
+footer .socials { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+
+@media (pointer: coarse) {
+  .card__tvshow:hover {
+    transform: none;
+  }
+}
+
+/* Animations */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes wiggle {
+  0%, 10% {
+    transform: rotate(0deg);
+  }
+  15%{
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .menu {
+    flex-direction: row;
+    padding: 12px 32px 12px 16px;
+    justify-content: space-between;
+  }
+
+  .menu__logo {
+    max-width: 160px;
+  }
+
+  .header__apresentacao {
+    margin-top: 55px;
+  }
+
+  .cards__tvshows {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    overflow-x: visible;
+  }
+
+  footer .links { 
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cards__tvshows {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer .links {
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .tvshows {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .cards {
+    flex-direction: row;
+    perspective: 2000px;
+    perspective-origin: top;
+  }
+
+  .card {
+    transition: transform 1s ease-in-out;
+  }
+
+  .cards:has(.card:nth-child(1):hover) .card:nth-child(2) {
+    transform: rotateY(-45deg);
+  }
+
+  .cards:has(.card:nth-child(2):hover) .card:nth-child(1) {
+    transform: rotateY(45deg);
+  }
+
+  .cards__tvshows {
+    gap: 40px;
+  }
+}

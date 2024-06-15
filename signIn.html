@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar | HBO Max</title>
-    <link rel="stylesheet" href="./assets/css/signIn.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/signIn.css">
+  <title>HBO Max - Entrar</title>
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <img src="./assets/images/hbo-logo.svg" alt="">
-            <div class="nav__login">
-                <a href="#">Entrar</a>
-                <button>Assine Agora</button>
-            </div>
-        </nav>
-    </header>
+  <nav class="menu">
+    <a class="menu__logo" href="./index.html"><img width="100%" src="./assets/images/hbo-logo.svg" alt="Logo do HBO Max"></a>
+    <ul>
+      <li><a href="./signIn.html">Entrar</a></li>
+      <li><a class="menu__button" href="#">Assine Agora</a></li>
+    </ul>
+  </nav>
 
-    <main class="content">
-        <form class="container__login">
-            <h3>Entrar</h3>
+  <main>
+    <section class="login__card">
+      <h1>
+        Entrar
+      </h1>
 
-            <div class="login__inputs">
-                <p>Você tem uma conta da HBO Max?</p>
-                <input type="email" placeholder="Endereço de e-mail">
-                <input type="password" placeholder="Senha">
-            </div>
-            
+      <div class="login__informations">
+        <p>Você tem uma conta da HBO Max?</p>
+        <input type="email" name="email" id="email" placeholder="Endereço de e-mail">
+        <input type="password" name="password" id="password" placeholder="Senha" minlength="8">
+      </div>
 
-            <div class="login__actions">
-                <button>Entrar</button>
-                <a href="#">Esqueceu a senha?</a>
-            </div>
-        </form>
-    </main>
+      <div class="login__actions">
+        <a class="button button__gradient" href="#">Entrar</a>
+        <a class="esqueceu__senha" href="#">Esqueceu a senha?</a>
+      </div>
+    </section>
+  </main>
 
-    <footer class="container">
-        <div class="links__legal">
-            <div class="links">
-                <a href="#">AGORA NA HBO MAX</a>
-                <a href="#">EM BREVE</a>
-                <a href="#">FILME EM DESTAQUE</a>
-                <a href="#">SÉRIES</a>
-                <a href="#">AJUDA</a>
-            </div>
+  <footer>
+    <div class="links">
+      <a href="https://www.hbomax.com/br/pt/sitemap">Agora na HBO Max</a>
+      <a href="https://www.hbomax.com/br/pt/coming-soon">Em breve</a>
+      <a href="https://www.hbomax.com/br/pt/feature">Filme em Destaque</a>
+      <a href="https://www.hbomax.com/br/pt/series">Séries</a>
+      <a href="https://help.hbomax.com/br">Ajuda</a>
+    </div>
 
-            <p class="footer__legal">© 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos reservados. HBO Max é usado sob licença.</p>
-        </div>
-        <div class="socials">
-            <img src="./assets/images/fb_0.png" alt="">
-            <img src="./assets/images/twitter_0.png" alt="">
-            <img src="./assets/images/instagram_0.png" alt="">
-            <img src="./assets/images/youtube_0.png" alt="">
-        </div>
-    </footer>
+    <p>© 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos reservados. HBO Max é usado sob licença.</p>
+
+    <div class="socials">
+      <img src="./assets/images/fb_0.png" alt="Facebook">
+      <img src="./assets/images/twitter_0.png" alt="Twitter">
+      <img src="./assets/images/instagram_0.png" alt="Instagram">
+      <img src="./assets/images/youtube_0.png" alt="Youtube">
+    </div>
+  </footer>
 </body>
 </html>
